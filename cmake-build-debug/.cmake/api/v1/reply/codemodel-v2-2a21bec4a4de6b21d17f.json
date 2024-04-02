@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sorting_algorithms",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_tests-Debug-e7e27bcee173fdf7d7e2.json",
+					"name" : "custom_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "efficiency_experiments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-efficiency_experiments-Debug-a7815f37a6b0a3e663ab.json",
+					"name" : "efficiency_experiments",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_sorting_algorithms::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_sorting_algorithms-Debug-b201786de1b2aa2d005d.json",
+					"name" : "test_sorting_algorithms",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/SZYMON/Szko\u0142a/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug",
+		"source" : "D:/SZYMON/Szko\u0142a/Studia/Sem IV/PiAA/ProjektSortowanie"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
