@@ -1,5 +1,0 @@
-D:/SZYMON/Szkoła/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug/CMakeFiles/test_sorting_algorithms.dir
-D:/SZYMON/Szkoła/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug/CMakeFiles/efficiency_experiments.dir
-D:/SZYMON/Szkoła/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug/CMakeFiles/custom_tests.dir
-D:/SZYMON/Szkoła/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/SZYMON/Szkoła/Studia/Sem IV/PiAA/ProjektSortowanie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
