@@ -6,17 +6,19 @@
 
 #include "tools/helpers.hpp"
 #include "tools/results.hpp"
+#include "tools/dataexporter.hpp"
 #include "algorithms/abstractsort.h"
 #include "algorithms/quicksort.h"
 #include "algorithms/introsort.h"
 #include "algorithms/mergesort.h"
 
 // std::vector<int> stacks = {10000, 50000, 100000, 500000, 1000000};
-std::vector<int> stacks = {10000};
+std::vector<int> stacks = {10000, 50000, 100000};
 std::vector<float> presortPercentages = {0, 25, 50, 75, 95, 99, 99.7f, -100};
 
 int main(int argc, char* argv[])
 {
+    const int MEASUREMENTS_COUNT = 100;
     std::vector<Results> benchmarks;
     std::map<std::string, AbstractSort<int>*> sorts;
 
@@ -30,7 +32,7 @@ int main(int argc, char* argv[])
                 Results result(sort.first, stack, presortPercentage);
                 std::cout << "Running " << sort.first << " with " << stack << " elements and " << presortPercentage << "% presorted" << std::endl;
 
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < MEASUREMENTS_COUNT; i++) {
                     std::vector<int> data = Helpers::generateArray(stack);
                     Helpers::preSort(data, presortPercentage);
                     auto dataBegin = data.begin();
@@ -46,14 +48,11 @@ int main(int argc, char* argv[])
             }
         }
     }
+
     std::cout << std::endl;
 
-    for (auto benchmark : benchmarks) {
-        std::cout << "Benchmark for " << benchmark.name << " with " << benchmark.presort << "% presorted" << std::endl;
-        std::cout << "Average: " << benchmark.average() << "ms" << std::endl;
-        std::cout << "Stack: " << benchmark.stack << std::endl;
-        std::cout << std::endl;
-    }
+    DataExporter exporter(benchmarks);
+    exporter.generate();
 
     return 0;
 }
