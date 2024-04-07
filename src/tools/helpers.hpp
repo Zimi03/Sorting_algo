@@ -1,5 +1,6 @@
 #include <vector>
 #include <random>
+#include <algorithm>
 
 namespace Helpers {
     std::vector<int> generateArray(const int size) {
