@@ -1,19 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 project(sorting_algorithms)
 
+set(CMAKE_CXX_STANDARD 11)
+
 add_library(sorting_algorithms_lib INTERFACE)
 target_include_directories(sorting_algorithms_lib INTERFACE include/)
 
 add_executable(test_sorting_algorithms
-        src/test_sorting_algorithms.cpp)
+        "src/test_sorting_algorithms.cpp")
 
 target_link_libraries(test_sorting_algorithms sorting_algorithms_lib)
 
 add_executable(efficiency_experiments
-        src/main.cpp)
+        "src/main.cpp")
 target_link_libraries(efficiency_experiments sorting_algorithms_lib)
 
 add_executable(custom_tests
-        src/custom_tests.cpp
-        "../../Struktury Danych/Data-Structures/Struktury Danych/Listy/src/main.cpp")
+        "src/custom_tests.cpp")
 target_link_libraries(custom_tests sorting_algorithms_lib)
