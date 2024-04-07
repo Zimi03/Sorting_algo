@@ -14,4 +14,10 @@ namespace Helpers {
 
         return numbers;
     }
+
+    void preSort(std::vector<int>& data, const float percentage) {
+        const int start = data.size() * percentage / 100;
+        std::cout << "Presorting " << start << " elements for " << data.size() << std::endl;
+        std::sort(data.begin(), data.begin() + start);
+    }
 }

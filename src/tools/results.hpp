@@ -3,7 +3,16 @@
 class Results
 {
     public:
+        std::string name;
         std::vector<int> durations;
+        int presort;
+        int stack;
+
+        Results(
+            std::string name,
+            int stack,
+            int presort
+        ) : name(name), stack(stack), presort(presort) {}
 
         void push(int duration)
         {
