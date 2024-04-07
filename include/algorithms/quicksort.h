@@ -4,9 +4,11 @@
 #include <iostream>
 #include <vector>
 #include <random>
+#include "abstractsort.h"
 
 template<typename T>
-class QuickSort {
+class QuickSort: public AbstractSort<T>
+{
 public:
     void sort(typename std::vector<T>::iterator begin, typename std::vector<T>::iterator end) {
         if (begin != end && std::distance(begin, end) > 1) {

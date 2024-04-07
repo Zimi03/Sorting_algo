@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(sorting_algorithms)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_library(sorting_algorithms_lib INTERFACE)
 target_include_directories(sorting_algorithms_lib INTERFACE include/)

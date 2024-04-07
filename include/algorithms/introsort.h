@@ -7,14 +7,17 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
+
 #include "heapsort.h"
 #include "mergesort.h"
 #include "quicksort.h"
+#include "abstractsort.h"
 
 // sortowanie introspektywne
 
 template<typename T>
-class IntroSort {
+class IntroSort: public AbstractSort<T>
+{
 public:
 
     IntroSort() = default;

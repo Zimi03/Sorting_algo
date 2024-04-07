@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <vector>
+#include "abstractsort.h"
 
 template <typename T>
-class MergeSort {
+class MergeSort: public AbstractSort<T>
+{
 public:
    void sort(typename std::vector<T>::iterator start, typename std::vector<T>::iterator end) {
        if (std::distance(start, end) > 1) {
