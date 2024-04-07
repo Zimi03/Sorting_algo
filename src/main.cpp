@@ -13,7 +13,7 @@
 
 // std::vector<int> stacks = {10000, 50000, 100000, 500000, 1000000};
 std::vector<int> stacks = {10000};
-std::vector<float> presortPercentages = {0, 25, 50, 75, 95, 99, 99.7f};
+std::vector<float> presortPercentages = {0, 25, 50, 75, 95, 99, 99.7f, -100};
 
 int main(int argc, char* argv[])
 {
@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 
     sorts["introsort"] = new IntroSort<int>();
     sorts["mergesort"] = new MergeSort<int>();
-    // sorts["quicksort"] = new QuickSort<int>();
+    sorts["quicksort"] = new QuickSort<int>();
 
     for (auto sort : sorts) {
         for (auto stack : stacks) {

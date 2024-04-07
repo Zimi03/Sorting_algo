@@ -16,8 +16,13 @@ namespace Helpers {
     }
 
     void preSort(std::vector<int>& data, const float percentage) {
+        const bool isAsc = percentage > 0;
         const int start = data.size() * percentage / 100;
-        std::cout << "Presorting " << start << " elements for " << data.size() << std::endl;
-        std::sort(data.begin(), data.begin() + start);
+
+        if (isAsc) {
+            std::sort(data.begin(), data.begin() + start);
+        } else {
+            std::sort(data.begin(), data.end(), std::greater<int>());
+        }
     }
 }
