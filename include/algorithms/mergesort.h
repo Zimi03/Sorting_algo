@@ -1,11 +1,11 @@
 #ifndef SORTING_ALGORITHMS_MERGESORT_H
 #define SORTING_ALGORITHMS_MERGESORT_H
+
 #include <iostream>
 #include <vector>
 
 template <typename T>
-class MergeSort{
-
+class MergeSort {
 public:
    void sort(typename std::vector<T>::iterator start, typename std::vector<T>::iterator end) {
        if (std::distance(start, end) > 1) {
@@ -13,7 +13,6 @@ public:
 
            sort(start, mid);
            sort(mid, end);
-
            merge(start, mid, end);
        }
    }
@@ -46,4 +45,5 @@ private:
             std::move(temp.begin(), temp.end(), start);
     }
 };
+
 #endif //SORTING_ALGORITHMS_MERGESORT_H

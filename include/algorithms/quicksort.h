@@ -1,3 +1,6 @@
+#ifndef SORTING_ALGORITHMS_QUICKSORT_H
+#define SORTING_ALGORITHMS_QUICKSORT_H
+
 #include <iostream>
 #include <vector>
 #include <random>
@@ -37,3 +40,5 @@ private:
         return right;
     }
 };
+
+#endif //SORTING_ALGORITHMS_QUICKSORT_H

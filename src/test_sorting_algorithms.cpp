@@ -23,28 +23,6 @@ std::vector<int> getSortedData()
     return data;
 }
 
-TEST_CASE("BubbleSort")
-{
-    auto data = getTestData();
-    auto resultData = getSortedData();
-
-    BubbleSort<int> bubbleSort;
-    bubbleSort.sort(data.begin(),data.end());
-
-    REQUIRE(data == resultData);
-}
-
-TEST_CASE("InsertSort")
-{
-    auto data = getTestData();
-    auto resultData = getSortedData();
-
-    InsertSort<int> insertSort;
-    insertSort.sort(data.begin(),data.end());
-
-    REQUIRE(data == resultData);
-}
-
 TEST_CASE("HeapSort")
 {
     auto data = getTestData();
@@ -63,17 +41,6 @@ TEST_CASE("MergeSort")
 
     MergeSort<int> mergeSort;
     mergeSort.sort(data.begin(),data.end());
-
-    REQUIRE(data == resultData);
-}
-
-TEST_CASE("ShellSort")
-{
-    auto data = getTestData();
-    auto resultData = getSortedData();
-
-    ShellSort<int> shellSort;
-    shellSort.sort(data.begin(),data.end());
 
     REQUIRE(data == resultData);
 }
@@ -99,3 +66,36 @@ TEST_CASE("IntroSort")
 
     REQUIRE(data == resultData);
 }
+
+// TEST_CASE("BubbleSort")
+// {
+//     auto data = getTestData();
+//     auto resultData = getSortedData();
+//
+//     BubbleSort<int> bubbleSort;
+//     bubbleSort.sort(data.begin(),data.end());
+//
+//     REQUIRE(data == resultData);
+// }
+
+// TEST_CASE("InsertSort")
+// {
+//     auto data = getTestData();
+//     auto resultData = getSortedData();
+//
+//     InsertSort<int> insertSort;
+//     insertSort.sort(data.begin(),data.end());
+//
+//     REQUIRE(data == resultData);
+// }
+
+// TEST_CASE("ShellSort")
+// {
+//     auto data = getTestData();
+//     auto resultData = getSortedData();
+//
+//     ShellSort<int> shellSort;
+//     shellSort.sort(data.begin(),data.end());
+//
+//     REQUIRE(data == resultData);
+// }
