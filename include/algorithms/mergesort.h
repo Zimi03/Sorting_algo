@@ -23,29 +23,33 @@ private:
                       typename std::vector<T>::iterator mid,
                       typename std::vector<T>::iterator end) {
 
+
         std::vector<T> temp(std::distance(start,end));
         auto left = start;
         auto right = mid;
         auto tempIter = temp.begin();
 
-            while (left < mid && right < end) {
-                if (*left <= *right) {
-                    *tempIter++ = std::move(*left++);
-                } else {
-                    *tempIter++ = std::move(*right++);
-                }
-            }
-
-            // kopiowanie pozostałych elementów
-            while(left < mid){
+        while (left < mid && right < end) {
+            if (*left <= *right) {
                 *tempIter++ = std::move(*left++);
-            }
-            while (right<end){
+            } else {
                 *tempIter++ = std::move(*right++);
             }
-            //kopiowanie wartości temp do oryginalnej tablicy
-            std::move(temp.begin(), temp.end(), start);
+        }
+
+        // kopiowanie pozostałych elementów
+        while(left < mid){
+            *tempIter++ = std::move(*left++);
+        }
+        while (right<end){
+            *tempIter++ = std::move(*right++);
+        }
+        //kopiowanie wartości temp do oryginalnej tablicy
+        std::move(temp.begin(), temp.end(), start);
     }
+
+
+
 };
 
 #endif //SORTING_ALGORITHMS_MERGESORT_H

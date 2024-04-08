@@ -12,10 +12,10 @@
 #include "algorithms/introsort.h"
 #include "algorithms/mergesort.h"
 
-// std::vector<int> stacks = {10000, 50000, 100000, 500000, 1000000};
-std::vector<int> stacks = {10000, 50000, 100000};
+ std::vector<int> stacks = {10000, 50000, 100000, 500000, 1000000};
+//std::vector<int> stacks = {10000, 50000, 100000, 1000000};
 std::vector<float> presortPercentages = {0, 25, 50, 75, 95, 99, 99.7f, -100};
-
+//std::vector<float> presortPercentages = {0};
 int main(int argc, char* argv[])
 {
     const int MEASUREMENTS_COUNT = 100;

@@ -22,6 +22,7 @@ public:
         typename std::vector<T>::iterator begin,
         typename std::vector<T>::iterator end
     ) {
+
         std::random_device rand;
         std::mt19937 gen(rand());
         std::uniform_int_distribution<> dis(0, std::distance(begin, end) - 1);
